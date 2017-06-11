@@ -1,4 +1,4 @@
-# Simple Page module
+# Simple Page Demo module
 
 by Deji Akala, dejiakala@gmail.com for X-Team
 

@@ -1,0 +1,7 @@
+simple_page_demo.page:
+  path: '/simple-page-demo'
+  defaults:
+    _title_callback: '\Drupal\simple_page_demo\Controller\SimplePageDemoController::title'
+    _controller: '\Drupal\simple_page_demo\Controller\SimplePageDemoController::page'
+  requirements:
+     _access: 'TRUE'

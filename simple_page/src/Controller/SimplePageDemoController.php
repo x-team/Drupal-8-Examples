@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\simple_page\Controller;
+namespace Drupal\simple_page_demo\Controller;
 
 /**
  * Defines a controller to render a simple page.
  */
-class SimplePageController {
+class SimplePageDemoController {
 
   /**
    * Build page output.
@@ -17,6 +17,16 @@ class SimplePageController {
     return array(
       '#markup' => "This is a simple page",
     );
+  }
+
+  /**
+   * Page title callback.
+   *
+   * @return string
+   *  The title of the page.
+   */
+  public function title() {
+    return "Simple page title";
   }
 
 }

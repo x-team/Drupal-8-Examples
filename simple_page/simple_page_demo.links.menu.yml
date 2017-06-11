@@ -1,0 +1,3 @@
+simple_page_demo.menu:
+  title: 'Simple page demo'
+  route_name: simple_page_demo.page

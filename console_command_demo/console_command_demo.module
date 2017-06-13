@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains console_command_demo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function console_command_demo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the console_command_demo module.
+    case 'help.page.console_command_demo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Console Command Demo commands') . '</p>';
+      return $output;
+
+    default:
+  }
+}

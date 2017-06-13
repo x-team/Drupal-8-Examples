@@ -1,0 +1,5 @@
+name: Console Command Demo
+type: module
+description: Demonstrates writing a DrupalConsole command
+core: 8.x
+package: X-Team

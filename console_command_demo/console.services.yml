@@ -1,0 +1,7 @@
+services:
+  console_command_demo.user_role_create:
+    class: Drupal\console_command_demo\Command\RoleCreateCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
+

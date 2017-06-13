@@ -1,0 +1,19 @@
+description: 'Create a user role.'
+options:
+    id: 'The ID of the role you would you like to create'
+    label: 'The label of the role'
+    weight: 'The weight of the role'
+questions:
+    id: 'Enter the ID of the role would you like to create'
+    label: 'Enter the label of the role'
+    weight: 'Enter the weight of the role'
+arguments:
+    id: 'The role ID'
+    label: 'The role label'
+    weight: 'The weight of the role'
+messages:
+    id: 'Role ID'
+    label: 'Label'
+    weight: 'Weight'
+    success: 'Role "%s" was created successfully.'
+    

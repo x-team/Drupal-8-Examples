@@ -2,4 +2,5 @@
 
 Find examples of Drupal 8 code discussed in our blog articles here:
 
-1. [Simple Page Demo](simple_page_demo)
+1. [Console Command Demo](console_command_demo)
+2. [Simple Page Demo](simple_page_demo)

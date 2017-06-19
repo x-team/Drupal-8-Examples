@@ -5,6 +5,7 @@ namespace Drupal\console_command_demo\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Command\Command;
+use Drupal\Console\Annotations\DrupalCommand;
 use Drupal\Console\Core\Command\Shared\ContainerAwareCommandTrait;
 use Drupal\Console\Core\Style\DrupalStyle;
 use Symfony\Component\Console\Input\InputOption;

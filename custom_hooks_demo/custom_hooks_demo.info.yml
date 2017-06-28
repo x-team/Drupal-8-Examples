@@ -1,0 +1,5 @@
+name: Custom hooks demo
+type: module
+description: Demonstration of hooks
+core: 8.x
+package: X-Team

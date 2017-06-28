@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_hooks_demo.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implements hook_help().
+ */
+function custom_hooks_demo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_hooks_demo module.
+    case 'help.page.custom_hooks_demo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Demonstration of hooks') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function custom_hooks_demo_user_login($account) {
+  drupal_set_message(t('Hi %name! Welcome to our website', ['%name' => $account->getDisplayName()]));
+  return new RedirectResponse(\Drupal::url('<front>', [], ['absolute' => TRUE]));
+}

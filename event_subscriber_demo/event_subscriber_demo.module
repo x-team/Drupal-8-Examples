@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains event_subscriber_demo.module.
+ */
+
+// 1. Event class
+// 2. EventSubscriber class
+// 3. Service
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\event_subscriber_demo\Event\NodeInsertDemoEvent;
+
+/**
+ * Implements hook_help().
+ */
+function event_subscriber_demo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the event_subscriber_demo module.
+    case 'help.page.event_subscriber_demo':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Demo of creating and subscribing to events') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function event_subscriber_demo_node_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  // Dispatch the node insert demo event so that subscribers can act accordingly.
+  \Drupal::service('event_dispatcher')->dispatch(NodeInsertDemoEvent::DEMO_NODE_INSERT, new NodeInsertDemoEvent($entity));
+}

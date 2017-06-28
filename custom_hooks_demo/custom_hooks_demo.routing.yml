@@ -1,0 +1,7 @@
+custom_hooks_demo.page:
+  path: '/custom-hooks-demo-cron'
+  defaults:
+    _title: 'Run all crons'
+    _controller: '\Drupal\custom_hooks_demo\Controller\CustomHooksDemoController::customRunAllCrons'
+  requirements:
+     _access: 'TRUE'

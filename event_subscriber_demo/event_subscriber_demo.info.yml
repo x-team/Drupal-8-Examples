@@ -1,0 +1,5 @@
+name: Event subscriber demo
+type: module
+description: Demo of creating and subscribing to events
+core: 8.x
+package: X-Team
